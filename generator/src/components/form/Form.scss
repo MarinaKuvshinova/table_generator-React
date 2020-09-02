@@ -1,0 +1,29 @@
+@import "../../variable";
+
+.form {
+  background: #fff;
+  overflow: hidden;
+  margin: 0;
+  max-width: 280px;
+  padding: 18px 17px 0;
+  border-radius: $borderRadius;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, .2);
+
+  @media only screen and ( max-width: $mobileWidth ) {
+      max-width: 100%;
+  }
+
+  &__row {
+    margin: 0 0 18px;
+  }
+
+  &__button {
+    font-size: 1.16em;
+    font-weight: bold;
+    height: 40px;
+    width: 100%;
+    margin: 30px auto 23px;
+  }
+
+}
+

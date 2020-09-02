@@ -1,0 +1,120 @@
+@import "../../variable";
+
+.table {
+  padding: 50px 0 0;
+  margin: 0;
+  width: 100%;
+
+  &__header {
+    width: 100%;
+    height: 30px;
+    background: $darkBlue;
+    border-radius: $borderRadius $borderRadius 0 0;
+    display: flex;
+    color: $whiteText;
+    font-size: 1.16em;
+    @media only screen and ( max-width: $mobileWidth ) {
+        display: none;
+    }
+  }
+
+
+  &__col {
+    display: flex;
+    align-items: center;
+    padding: 0 14px;
+    border-left: 1px solid transparent;
+
+    &:nth-child(1) {
+      border: 0;
+    }
+    &:nth-child(1),
+    &:nth-child(3){
+      width: 95px;
+    }
+    &:nth-child(2) {
+      width: 130px;
+    }
+    &:nth-child(3),
+    &:nth-child(4){
+      width: 80px;
+    }
+    &:nth-child(5)
+    {
+      flex: 1;
+      justify-content: space-around;
+      @media only screen and ( max-width: $mobileWidth ) {
+        justify-content: center;
+      }
+    }
+    &__title {
+      display: none;
+      font-weight: 700;
+      padding: 0 5px 0 0;
+      @media only screen and ( max-width: $mobileWidth ) {
+        display: inline;
+      }
+    }
+  }
+
+  &__body {
+    position: relative;
+    @media only screen and ( max-width: $mobileWidth ) {
+      background: #fff;
+      border-radius: $borderRadius;
+      box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    &__row {
+      font-weight: 300;
+      background: #fff;
+      width: 100%;
+      display: flex;
+      color: $darkText;
+      border: 1px solid $border;
+      border-width: 0 1px 1px;
+      min-height: 32px;
+      @media only screen and ( max-width: $mobileWidth ) {
+        border-width: 1px 0 0;
+        height: auto;
+        flex-wrap: wrap;
+        border-radius: 0 !important;
+        padding: 10px 0;
+        &:first-child {
+          border-width: 0;
+        }
+      }
+
+      &:last-child {
+        border-radius: 0 0 $borderRadius $borderRadius;
+      }
+      &__col {
+        border-left: 1px solid $border;
+        @media only screen and ( max-width: $mobileWidth ) {
+          border: 0;
+          padding: 5px 20px;
+          width: 100% !important;
+        }
+
+      }
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 0 0 13px;
+
+    & > * {
+      margin: 0 0 0 12px;
+    }
+  }
+  &__delete {
+    width: 38px;
+    height: 100%;
+  }
+
+
+
+}

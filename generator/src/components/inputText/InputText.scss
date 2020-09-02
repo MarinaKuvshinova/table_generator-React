@@ -1,0 +1,14 @@
+@import "../../variable";
+
+.inputText {
+  display: block;
+  width: 100%;
+  border-radius: $borderRadius;
+  background: #fff;
+  outline: none;
+  border: 1px solid #c3ccd9;
+  color: #868c96;
+  font: 1em/1 'Roboto', sans-serif;
+  padding: 5px 16px;
+  height: 42px;
+}
